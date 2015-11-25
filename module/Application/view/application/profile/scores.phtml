@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2" id="chart-container">
+        <canvas id="chart" width="400" height="400"></canvas>
+    </div>
+</div>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.js"></script>
+<script>
+$(function() {
+    var api    = '<?php echo $this->url('api', array('action'=>'get-scores')); ?>';
+    $.get(
+        api,
+        function(json) {
+			var option ={scaleBeginAtZero: true,}
+			var ctx = $("#chart").get(0).getContext("2d");
+			var myNewChart = new Chart(ctx).Bar(json,option);
+        });
+});
+</script>

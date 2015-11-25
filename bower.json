@@ -1,0 +1,14 @@
+{
+  "name": "y",
+  "version": "1",
+  "description": "0",
+  "main": "Application",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
